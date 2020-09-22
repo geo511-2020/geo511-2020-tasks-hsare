@@ -28,4 +28,5 @@ plt <- ggplot(temp, aes(x=YEAR, y=JJA)) +
 print(plt)
 
 #Save graphic to png file
-ggsave
+#code from my group colleague Brendan Kunz. I updated this code after our group meeting3
+ggsave(("Case Study2.png"), plot = last_plot()) #code from my group colleague Brendan Kunz
