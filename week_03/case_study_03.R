@@ -30,7 +30,8 @@ labs(x = "Life Expectancy", y = "GDP per capita", size = "Population(100k)", col
 #Print
 print(plt1)
 # Save
-ggsave()
+#code from my group colleague Brendan Kunz
+ggsave(("Case Study3_1.png"), plot = last_plot()) #code from my group colleague Brendan Kunz
 ################################################
 #PLOT2
 
@@ -68,4 +69,5 @@ plt2 <- ggplot(data = gapminder, aes(color = continent, x = year, y = gdpPercap)
 #Print
 print(plt2)
 # Save
-ggsave()
+#code from my group colleague Brendan Kunz
+ggsave(("Case Study3_2.png"), plot = last_plot()) #code from my group colleague Brendan Kunz
