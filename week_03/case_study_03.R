@@ -16,7 +16,7 @@ gapminder <- gapminder %>% filter(country != "kuwait")
 # 2)Specify the appropriate aesthetic mapping (aes()) to color by contintent,
 #adjust the size of the point with size=pop/100000,
 #x-axis=lifeExp, y-axis=gdpPerCap [these informations are from the Given figure]
-plt1 <- ggplot(data = gapminder, aes(color = continent, x = lifeExp, y = gdpPercap, size = pop/1000000)) +
+plt1 <- ggplot(data = gapminder, aes(color = continent, x = lifeExp, y = gdpPercap, size = pop/100000)) +
   geom_point() +
   # 3)Use scale_y_continuous(trans = "sqrt") to get the correct scale on the y-axis.
   # 4)Use facet_wrap(~year,nrow=1) to divide the plot into separate panels.
@@ -71,3 +71,4 @@ print(plt2)
 # Save
 #code from my group colleague Brendan Kunz
 ggsave(("Case Study3_2.png"), plot = last_plot()) #code from my group colleague Brendan Kunz
+
