@@ -45,7 +45,7 @@ ny <- us_states%>%  st_transform(crs = albers)%>%
 
 # 1)use st_intersection() to intersect the canada buffer with New York (this will be your final polygon)
 
-ny_border <-  st_intersection(canada, ny)
+ny_border <- canada%>% st_intersection(ny)
 
 # 2) Plot the border area using ggplot() and geom_sf().
 
