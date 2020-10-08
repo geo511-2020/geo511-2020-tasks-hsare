@@ -45,7 +45,7 @@ ny <- us_states%>%  st_transform(crs = albers)%>%
 
 # 1)use st_intersection() to intersect the canada buffer with New York (this will be your final polygon)
 
-ny_border <- canada %>%  st_intersection(ny)
+ny_border <-  st_intersection(canada, ny)
 
 # 2) Plot the border area using ggplot() and geom_sf().
 
@@ -53,3 +53,9 @@ ggplot() +
   geom_sf(data = ny) + #BECAUSE OUR DATA IS NY
   geom_sf(data = ny_border, fill = "red") + #BECAUSE WE WANT TO HIGHIGHT NY BORDER WITH CANADA IN RED
   labs(title = "New York Land within 10km") #THE TITLE ID FROM THE FIGURE SHOWN IN THE ASSIGNMENT
+
+print(ny_border) #This is not the area of the border but include other area as well
+st_area(ny_border) #This is the real border area
+st_area(canada) # Here I am just trying to figure out why print(ny_border) is not showing only the area of the border
+st_area(ny) + st_area(canada) # Here I am just trying to figure out why print(ny_border) is not showing only the area of the border
+
