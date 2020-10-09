@@ -1,0 +1,32 @@
+# Project Proposal Presentation
+
+# Summary and Goal
+
+My ultimate goal in this project is to use the package called "threejs" to visualize the future best mining sites(water/water ice, ice, volatiles materials) on the Moon and/or on Mars. The final product will then be mining  sites locations on a Red-Green-Blue(RGB) map.
+However, before getting into that step, I will use some geological and engineering criterias to determine and select the best landing (mining) sites for our future Rovers. The criteria I will base my project on to select the landing sites are: where are located minerals indicating the presence of water/water ice or volatile materials? where do we have permanent sunlight to use as source of energy for processing the water and charging the rovers? Is the topography of the site suitable for the mobility of the rovers to and from processing centers?...
+For this project, the most important criteria I will consider is the geological criteria for question of time. I will explore at least 9 sites as training sites and then select the best among them as future mining sites where we will land the rovers.
+For each training site, I will download and use Raster data of the Moon and/or Mars. Those data will be visible and infrared data in the ".TIFF" format and they are a combination of different bands (7 bands for Mars according to the Mars Odysee data website and maybe less or more for the Moon) and each band is showing data in a specific wavelength. After downloading those data, I will resize some of them so that all images will have the same size and I will then add them together to create a metada containing all information from each site. I will finally use the band ratio combination to determine the abundance of water/water ice, ice or volatiles materials in each site I choose as training site and from there, I will be able to see which sites will be the best to select as future mining sites.
+  
+# Brief Info about the Authors
+
+B. W. Lewis,
+Alexey Stukalov,
+Yihui Xie,
+Andreas Briese,
+B. Thieurmel
+
+# Brief info about the package threejs
+
+The package provides an interactive 3D graphics and globe plot. It is able to render R plots in R studio and works also in R Markdown, Shiny and R command line.
+
+## Example: Interactive 3D graphic including point clouds and globes using three.js and html_widegets
+
+library("shiny")
+runApp(system.file("examples/globe",package="threejs"))
+runApp(system.file(:examples/scatterplot",package="threejs"))
+
+
+# sources of the codes I used
+
+threejs package.
+
