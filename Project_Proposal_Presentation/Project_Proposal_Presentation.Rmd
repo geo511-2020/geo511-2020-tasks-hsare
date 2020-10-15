@@ -20,10 +20,15 @@ B. Thieurmel
 The package provides an interactive 3D graphics and globe plot. It is able to render R plots in R studio and works also in R Markdown, Shiny and R command line.
 
 ## Example: Interactive 3D graphic including point clouds and globes using three.js and html_widegets
+Unfortunately, because the codes line I use in this project presentation, the plots can't be generated in the website according to Professor Adam when I asked him. The following first line is the image that would be generated. However, when the three lines of code I added are runed in R studio, we are able to see a Relative population of the world cities from the R maps package and a Shiny three.js scatterplot example.
 
+![](https://bwlewis.github.io/rthreejs/modis.jpg)
+
+'''{r}
 library("shiny")
 runApp(system.file("examples/globe",package="threejs"))
 runApp(system.file(:examples/scatterplot",package="threejs"))
+'''
 
 
 # sources of the codes I used
