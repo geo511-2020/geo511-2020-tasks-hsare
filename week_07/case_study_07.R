@@ -1,6 +1,9 @@
 
 #Case Study7
 
+#Problem: make figure illustrating the distribution of GDP per capita for all countries within each continent using
+          #"world" data and "spData" package
+
 #Current version of the code given in the assignment
 library(tidyverse)
 library(reprex)
@@ -11,10 +14,11 @@ ggplot(world,aes(x=gdpPercap, y=continent, color=continent))+
   geom_density(alpha=0.5,color=F)
 
 #My New Codes to perform the task
+  #Given packages I did not use
 library(tidyverse) #I did not ued this one
 library(reprex) #I did not ued this one
-library(sf) #I did not used this one
 
+   #I only use the following packages and lines of codes
 library(spData)
 library(rgdal) #Add
 library(sf)
