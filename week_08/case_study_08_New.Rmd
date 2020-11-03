@@ -1,0 +1,47 @@
+---
+#I work on all of these codes in my other laptop and send the data to my old laptop and use that one to push it into GitHub. All my codes are working in the laptop I used to code. The only line I am still having trouble with is the last one because R is still asking me someting about "row_spec" I am still not able to fuigure out
+title: "New Case Study8"
+author: "Hadarou Sare"
+date: "11/3/2020"
+#output: html_document
+  output:
+  html_document: default
+  github_document: default
+  powerpoint_presentation: default
+  word_document: default
+---
+
+```{r eval=T, message=F, warning= F, echo=FALSE, results='hide'}
+ #{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2) 
+library(tidyverse)
+library(knitr)
+library(kableExtra) #Help from my groupmate
+value = read_table("ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt",  skip=56)%>%
+  select(year, mean)
+
+
+graph1=ggplot(value, aes(year, mean))+
+  geom_line(color="red")+
+  labs(x = "Year",y="Maunal Loa Annual Mean co2 in ppm", title="Annual Mean Carbon Dioxide Concentration 1959-present")
+plot(graph1)
+
+```
+
+
+
+
+```{r eval=T, message=F, warning=F, echo=F}
+library(magick)
+#{r cars}
+#summary(cars)
+library(magick)
+value %>% top_n(5) %>% arrange(desc(year))%>%
+  kable(align = "ll", caption = "Top 5 Annual Mean Carbon Dioxide Concebntrations at Mona Loa") %>% kable_styling() #Help from my groupmate
+row_spec(1, bold=T, color="red")%>% as_image(width=10, file="table.png") 
+
+
+```
+
+
