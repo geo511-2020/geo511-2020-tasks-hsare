@@ -25,7 +25,7 @@ list.files(tdir)
 #Another given code
 storm_data <- read_sf(list.files(tdir,pattern=".shp",full.names = T))
 
-#STEP2
+#STEPS
 
 storms <- storm_data%>%
   filter(year>=1950)%>% #Filter to storms 1950-present with filter()
