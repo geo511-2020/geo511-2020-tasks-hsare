@@ -1,4 +1,4 @@
-
+ 
 #Case Study7
 
 #Problem: make figure illustrating the distribution of GDP per capita for all countries within each continent using

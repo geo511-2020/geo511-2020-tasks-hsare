@@ -1,5 +1,5 @@
 #Case Study2
-
+#
 #Given Data1:
 library(tidyverse)
 dataurl="https://data.giss.nasa.gov/tmp/gistemp/STATIONS/tmp_USW00014733_14_0_1/station.cvs"
