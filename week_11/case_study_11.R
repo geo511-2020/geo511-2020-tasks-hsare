@@ -1,5 +1,5 @@
 #Case Study11
-#Task 11
+
 
 ```{r setup, include=FALSE} #I put this because my laptop I used to run this code seem to not work perfectly without it
 knitr::opts_chunk$set(echo = TRUE) #I put this because my laptop I used to run this code seem to not work perfectly without it
@@ -38,7 +38,7 @@ erie_loop <- foreach(i= unique(erie_crop$variable), .combine='rbind') %do% {
     st_as_sf() %>%
     mutate(variable=i)
 }
-#Now the mapview
+#Now the mapview part
 mapview(erie_loop, zcol="variable", cex=1, alpha = 0)
 mapview(erie_loop, zcol="variable", cex=0.1, alpha = 0)
 ```
